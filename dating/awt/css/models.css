@@ -1,0 +1,241 @@
+#mainContainer {
+  display: grid;
+  grid-template-areas: "mGridLeft mBigPic mGridBio mGridRight";
+  grid-template-columns: .25fr .50fr .50fr .25fr;
+  grid-template-rows: auto;
+  grid-gap: .5em;
+  overflow: hidden;
+}
+
+.mGridLeft {
+  left: 0;
+  grid-area: mGridLeft;
+  max-width: 350px; /* matters */
+  display: grid; /* matters */
+  overflow: hidden; /* matters */
+}
+
+.mGridRight {
+  right: 0;
+  grid-area: mGridRight;
+  max-width: 350px; /* matters */
+  display: grid; /* matters */
+  overflow: hidden; /* matters */
+}
+
+.mGridBigPic {
+  left: -.5em;
+  position: relative;
+  grid-area: mBigPic;
+  width: 100%;
+}
+
+.profileimg {
+  position: fixed;
+}
+
+#bigImage {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.profileBio {
+  padding-top: 2em;
+  position: fixed;
+  background-image: url("/awt/image/bg_bio.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 33%;
+  height: 100%;
+  align-content: center;
+  color: white;
+}
+
+.profileBioAlt {
+  padding-top: 2em;
+  position: fixed;
+  background-image: url("/awt/image/bg_biof.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 33%;
+  height: 100%;
+  align-content: center;
+  color: white;
+}
+
+.profileBioAltm {
+  padding-top: 2em;
+  position: fixed;
+  background-image: url("/awt/image/bg_biom.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 33%;
+  height: 100%;
+  align-content: center;
+  color: white;
+}
+
+.profileBioFeat {
+  padding-top: 2em;
+  position: fixed;
+  background-image: url("/awt/image/bg_biofeat.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 33%;
+  height: 100%;
+  align-content: center;
+  color: white;
+}
+
+#innerBio {
+  position: relative;
+  left: 17%;
+}
+
+#innerBio, input, textarea {
+  width: 65%;
+}
+
+button {
+  background: #bbbbbb;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+button:hover {
+  box-shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.75);
+}
+
+.mGridBio {
+  left: -.25em;
+  position: relative;
+  grid-area: mGridBio;
+}
+
+.mGridB {
+  display: grid; /* matters */
+  overflow-y: auto; /* matters */
+}
+
+.mGridC {
+  height: 112em;
+  overflow-y: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.mGridC::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.mGridC {
+  -ms-overflow-style: none;
+}
+
+.mGridImages {
+  text-align: center;
+}
+
+.mGridImages img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.mGridLeft button {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: 0px solid white;
+  background: white;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+.mGridRight button {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: 0px solid white;
+  background: white;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+/*Layout of Page Grid    ---  work on mobile wrwapping   ---- */
+@media screen and (max-width: 600px) {
+  #mainContainer {
+    display: grid;
+    grid-template-areas: "mGridLeft mBigPic"
+    "mGridRight mBigPic";
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .mGridBio {
+    left: 0;
+    display: none;
+    top: -130rem;
+    grid-area: mGridBio;
+  }
+  .mGridLeft {
+    text-align: center;
+    width: 100%;
+    grid-area: mGridLeft;
+  }
+  .mGridRight {
+    text-align: center;
+    width: 100%;
+    grid-area: mGridRight;
+  }
+  .mGridLeft, .mGridRight button {
+    text-align: center;
+  }
+  .mGridImages img {
+    margin: 0;
+    min-width: 5em;
+    min-height: 6em;
+  }
+  .mGridBigPic {
+    left: -.25em;
+    grid-area: mBigPic;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+  }
+  main {
+    padding-left: 0em;
+    left: 0;
+    margin: 0;
+    top: 9em;
+  }
+  #bnimage {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #mainContainer {
+    display: grid;
+    grid-template-areas: "mGridLeft mBigPic" "mGridRight mGridBio";
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .mGridBigPic {
+    left: 0;
+  }
+
+  .mGridBio {
+    left: 0;
+  }
+}

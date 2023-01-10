@@ -1,0 +1,215 @@
+main {
+    position: absolute;
+    padding-left: .5em;
+    top: 13em;
+    margin: 0;
+    width: 99.7%;
+}
+
+.altImage {
+  filter: grey; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1);
+  transition: ease-in linear 2s;
+}
+
+#mainContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+.alternateLogo img {
+  height: 25%;
+  width: 25%;
+}
+
+#mainContainer {
+  display: grid;
+  grid-template-areas: "feat1 fem men feat2" "hero hero hero hero" "jrsm jrsm stuff stuff" "about about stuff stuff" "about about stuff stuff" "log log log log" "4 4 4 4";
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: repeat(5, auto auto) 200px 80px;
+  grid-auto-flow: row;
+  grid-gap: .25em;
+  overflow: hidden;
+}
+.femContainer, .menContainer, .ftr1Container .ftr2Container {
+    height: 20em;
+}
+
+.femContainer, .menContainer, .ftr1Container, .ftr1Container img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.altLogoBox {
+  grid-area: log;
+}
+
+#infoJRSM {
+  grid-area: jrsm;
+}
+#picsNStuff {
+  grid-area: stuff;
+}
+#aboutus {
+  grid-area: about;
+}
+
+.femContainer {
+    grid-area: fem;
+}
+
+.menContainer {
+    grid-area: men;
+}
+
+.ftr1Container {
+    grid-area: feat1;
+}
+.ftr2Container {
+    grid-area: feat2;
+}
+.heroImage {
+    grid-area: hero;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.innerHero, altImage {
+  filter: grayscale(100%);
+  -webkit-filter:grayscale(100%);
+}
+
+.innerHero img:hover, .innerHero-color {
+  filter: grayscale(0);
+  -webkit-filter:grayscale(0);
+}
+
+.innerHero h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  position: absolute;
+  text-align: center;
+  font-weight: 600;
+  top: 40%;
+  width: 100%;
+  z-index: 2;
+  color: white;
+  transform: rotate(-2deg)
+}
+
+h1 span {
+  color: white;
+  font: bold 24px/45px Helvetica, Sans-Serif;
+  letter-spacing: -1px;
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.7);
+  padding: -10px;
+}
+
+.altImage img:hover, .altImage-color {
+  filter: grayscale(0);
+  -webkit-filter:grayscale(0);
+}
+
+@media screen and (max-width: 1100px) {
+  .topImageNav button {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0px solid white;
+    background: white;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+  }
+  main {
+    left: -1%;
+    margin: 0;
+    top: 9em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+    .topImageNav button {
+        text-align: center;
+    }
+    .topImageNav {
+        text-align: left;
+        width: 100%;
+        right: 5em;
+        grid-area: mGridLeft;
+    }
+    main {
+        left: -.75%;
+        margin: 0;
+        top: 9em;
+    }
+    #fSymbol {
+      font-size: .33em;
+    }
+  #mainContainer {
+    display: grid;
+    grid-template-areas: "fem men" "jrsm jrsm" "stuff stuff" "about about" "tos tos" "log log";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, auto 1fr);
+    grid-gap: .25em;
+    overflow: hidden;
+  }
+  .femContainer, .menContainer, .ftr1Container .ftr2Container {
+    height: 20em;
+  }
+
+  .altLogoBox {
+    grid-area: log;
+  }
+  .femContainer, .menContainer, .ftr1Container, .ftr1Container img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+  }
+  #infoJRSM {
+    grid-area: jrsm;
+  }
+  #picsNStuff {
+    grid-area: stuff;
+  }
+  #aboutus {
+    grid-area: about;
+  }
+  #tos {
+    grid-area: tos;
+  }
+  .femContainer {
+    grid-area: fem;
+  }
+  .menContainer {
+    grid-area: men;
+  }
+  .ftr1Container {
+    display: none;
+    grid-area: feat1;
+  }
+  .ftr2Container {
+    display: none;
+    grid-area: feat2;
+  }
+  .heroImage {
+    grid-area: hero;
+    display: none;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+  }
+  .alternateLogo img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+  }
+
+}

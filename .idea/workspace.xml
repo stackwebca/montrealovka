@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="97874844-79f7-4117-b108-fa4be79d90a2" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/phpmailer/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="ProjectId" id="2ACj7TBAFkdGIXUBPNUfotec87e" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/MyChat/images" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\movka\MyChat\images" />
+      <recent name="C:\xampp\htdocs\movka\dating\pvt\admin" />
+      <recent name="C:\xampp\htdocs\movka\dating\pvt" />
+      <recent name="C:\xampp\htdocs\movka\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\movka\dating" />
+      <recent name="C:\xampp\htdocs\movka\dating\pvt\admin" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.php">
+    <configuration name="index.php (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/movka/dating/index.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.php (3)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/movka/dating/awt/index.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.php (4)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/movka/bucket/public_html_xrub/index.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/movka/dating/pvt/admin/index.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="messenger.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/movka/dating/pvt/admin/messenger.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.php" />
+        <item itemvalue="JavaScript Debug.index.php (2)" />
+        <item itemvalue="JavaScript Debug.index.php (3)" />
+        <item itemvalue="JavaScript Debug.messenger.php" />
+        <item itemvalue="JavaScript Debug.index.php (4)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="97874844-79f7-4117-b108-fa4be79d90a2" name="Default Changelist" comment="" />
+      <created>1654520293244</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654520293244</updated>
+      <workItem from="1654520294360" duration="6188000" />
+      <workItem from="1654557174418" duration="5388000" />
+      <workItem from="1654605701956" duration="6116000" />
+      <workItem from="1654613609396" duration="618000" />
+      <workItem from="1654627987422" duration="28000" />
+      <workItem from="1654628016775" duration="3738000" />
+      <workItem from="1654633990897" duration="7708000" />
+      <workItem from="1654702871931" duration="5491000" />
+      <workItem from="1654775621471" duration="1914000" />
+      <workItem from="1654782977552" duration="998000" />
+      <workItem from="1654971851499" duration="4680000" />
+      <workItem from="1655076575094" duration="594000" />
+      <workItem from="1655342651242" duration="593000" />
+      <workItem from="1655732958994" duration="7915000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

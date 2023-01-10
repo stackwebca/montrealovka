@@ -1,0 +1,147 @@
+.mainContact {
+  position: relative;
+  top: 13em;
+  margin: 0;
+  width: 100%;
+}
+
+#contactPage {
+  display: grid;
+  grid-template-areas: "chero  chero  chero  chero   chero   chero   chero" "1 1 1 1 1 1 1" "2  map 7 cDetails 8 contact 3" "2 6 6 cDetails 8 4 4";
+  grid-template-columns: .35fr .75fr .25fr 1fr .25fr .75fr .35fr;
+  grid-template-rows: .20fr 0.035fr 1fr 1fr;
+  grid-auto-flow: column;
+
+}
+
+#contactPage img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+.contactGrid {
+  grid-area: contact;
+  width: 100%;
+}
+
+.map {
+  grid-area: map;
+  width: 100%;
+  height: 100%;
+}
+
+#googleMap {
+  width: 100%;
+  height: 50%;
+  object-fit: fill;
+}
+.map H5 {
+  font-weight: 600;
+  text-align: justify;
+}
+
+.cDetails {
+  grid-area: cDetails;
+  width: 100%;
+  height: 100%;
+}
+
+.cHeroImg {
+  grid-area: chero;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+#cInnerHero {
+}
+
+.contact {
+  width: 100%;
+}
+
+.center {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  background: #35363A;
+  color: white;
+}
+@media screen and (max-width: 1100px) {
+  #contactPage {
+    display: grid;
+    grid-template-areas: "1 cDetails 2" "1 map 2" "1 3 2" "1 contact 2";
+    grid-template-columns: .025fr 1fr .025fr;
+    grid-template-rows: repeat(2, auto 1fr) 5fr 1fr;
+    grid-auto-flow: column;
+  }
+  .cDetails {
+    grid-area: cDetails;
+    width: 100%;
+    height: 100%;
+  }
+  .cHeroImg {
+    display: none;
+  }
+  .contactGrid {
+    grid-area: contact;
+    width: 100%;
+  }
+  .map {
+    grid-area: map;
+    width: 100%;
+    height: 70%;
+  }
+  #googleMap {
+    width: 100%;
+    height: 70%;
+    object-fit: fill;
+  }
+  .mainContact {
+       position: relative;
+       top: 13em;
+       margin: 0;
+       width: 100%;
+       overflow: hidden;
+     }
+}
+
+@media screen and (max-width: 600px) {
+  #contactPage {
+    display: grid;
+    grid-template-areas: "1 cDetails 2" "1 map 2" "1 3 2" "1 contact 2";
+    grid-template-columns: .025fr 1fr .025fr;
+    grid-template-rows: repeat(2, auto 1fr) 5fr 1fr;
+    grid-auto-flow: column;
+  }
+  .cDetails {
+    grid-area: cDetails;
+    width: 100%;
+    height: 100%;
+  }
+  .cHeroImg {
+    display: none;
+  }
+  .contactGrid {
+    grid-area: contact;
+    width: 100%;
+  }
+  .map {
+    grid-area: map;
+    width: 100%;
+    height: 70%;
+  }
+  #googleMap {
+    width: 100%;
+    height: 70%;
+    object-fit: fill;
+  }
+  .mainContact {
+    position: relative;
+    top: 9em;
+    margin: 0;
+    width: 100%;
+  }
+}

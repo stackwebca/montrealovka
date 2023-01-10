@@ -1,0 +1,2726 @@
+/*Essential Syles*/
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,900");
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', Arial, sans-serif;
+    color: #6b6b6b;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow-x: hidden;
+}
+
+.mainBody {
+    padding: 0 15px;
+    margin: 0 -15px;
+}
+
+/*Scroll Styles*/
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgb(97, 97, 107);
+    background: linear-gradient(90deg, rgb(182, 182, 190) 0%, rgb(231, 226, 226) 48%, rgb(182, 182, 190) 95%);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    height: 50px;
+    background: rgb(51, 51, 55);
+    background: linear-gradient(90deg, rgb(79, 78, 78) 6%, rgb(90, 89, 89) 48%, rgb(79, 78, 78) 87%);
+}
+
+/*Big Search*/
+.wrapper {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.searchbox {
+    position: relative;
+}
+
+.notinput {
+    width: 0px;
+    border: 0px;
+    height: 50px;
+    padding: 0px 25px;
+    border-radius: 50px;
+    box-shadow: 0 0 15px 1px #b6bbc0;
+    outline: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.5em;
+    transition: all 0.5s linear;
+    padding-bottom: 0em;
+}
+
+.searchbox .input {
+    width: 0px;
+    border: 0px;
+    height: 50px;
+    padding: 0px 25px;
+    border-radius: 50px;
+    box-shadow: 0 0 15px 1px #b6bbc0;
+    outline: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.5em;
+    transition: all 0.5s linear;
+    padding-bottom: 0em;
+}
+
+.searchbtn {
+    position: absolute;
+    top: 0px;
+    right: -1px;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s 0.6s linear;
+}
+
+.searchbtn .fas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #dd2844;
+    font-size: 18px;
+    transition: all 0.5s 0.6s linear;
+}
+
+/* jquery class */
+.searchbtn.bg-green {
+    background: #dd2844;
+    transition: all 0.2s linear;
+}
+
+.searchbtn .fas.color-white {
+    color: #fff;
+    transition: all 0.2s linear;
+}
+
+.searchbtn:hover, .searchbtn:focus {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+    transition: all 0.2s linear;
+}
+
+.searchbox .input.active-width {
+    width: 600px;
+    background: rgba(0, 0, 0, 0.51);
+    color: white;
+}
+
+.myLBanner, .myRBanner {
+    padding: 0 0;
+    padding-top: 1.5em;
+    padding-bottom: .5em;
+}
+
+.bannerAd {
+    padding-bottom: 2.5em;
+}
+
+.wideAdvert {
+    height: 100%;
+    width: 100%;
+}
+
+.smallAdvert {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.container-search {
+    position: relative;
+}
+
+#searchable_clrBtn {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+
+#mobileAdSearch {
+    display: none;
+    height: 50px;
+}
+
+#mobileAdCriteria {
+    display: none;
+}
+
+.myMkt1, .myMkt2 {
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+
+/*Utility Styles*/
+#backtop {
+    position: fixed;
+    left: 270px;
+    right: auto;
+    top: auto;
+    bottom: 10px;
+    outline: none;
+    overflow: hidden;
+    color: #1008ff;
+    background-color: #dbdadf;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    line-height: 25px;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    z-index: 999999;
+    opacity: 1;
+    display: none;
+    -webkit-box-shadow: 2px 0px 2px -4px rgb(57, 57, 57);
+    -moz-box-shadow: 2px 0px 2px -4px rgb(57, 57, 57);
+    box-shadow: 2px 0px 2px -4px rgb(57, 57, 57);
+}
+
+#backtop:hover {
+    background-color: #676767;
+}
+
+#backtop.mcOut {
+    opacity: 0;
+}
+
+.blink_me {
+    animation: blinker 3000ms linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* ---------------- For sticky header: class="float-panel"  ------------------*/
+.float-panel {
+    width: 100%;
+    background: white;
+    z-index: 300;
+    padding: 30px 0;
+    transform: translateZ(0);
+    transition: all 0.5s; /* Effect for switching from .fixed to static */
+}
+
+.float-panel .content-area {
+    margin: 10px auto;
+}
+
+.float-panel a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #444;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.float-panel .fa-gg {
+    color: #F0595C;
+    font-size: 30px;
+    vertical-align: middle;
+    transition: all 1s;
+}
+
+/* when class="float-panel fixed" */
+.fixed {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 4px 0;
+    animation: slide-down 0.7s;
+    opacity: 0.9;
+}
+
+.fixed .fa-gg {
+    transform: rotate(360deg);
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+}
+
+/* ---------------- For Animation on Scroll ---------------- */
+.slideanim {
+    visibility: hidden;
+    visibility: visible \9; /*For old IE browsers IE6-8 */
+}
+
+.slideanim.slide {
+    visibility: visible;
+    animation: slide 2s;
+}
+
+.slideanim::after {
+    /* useful when its child elements are float:left; */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.floatleft {
+    float: left;
+}
+
+.align_center {
+    text-align: center;
+}
+
+.align_right {
+    text-align: right;
+}
+
+.align_left {
+    text-align: left;
+}
+
+/*use this class to disable a tag hyperlink*/
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #1008ff;
+    cursor: pointer;
+    text-shadow: 0 0 1px #393939;
+}
+
+/*fontawesome flame icon*/
+#flame {
+    margin-top: .35em;
+    float: right;
+    color: #676767;
+    border: 1px black;
+    font-size: .9em;
+}
+
+@-webkit-keyframes a-active {
+    from {
+        text-shadow: 0 0 .5px #393939, 0 0 1px #ff3928;
+    }
+    to {
+        text-shadow: 0 0 1px #000000, 0 0 .5px #ff3928;
+    }
+}
+
+/*Overlay Container */
+.container-overlay {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+/* Top left text */
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+/* Top right text */
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.OverlayTxt_Container {
+    margin-bottom: 1em;
+    position: relative;
+    text-align: center;
+    height: 55px;
+}
+
+/* Centered text */
+.overlayTxt_center {
+    position: absolute;
+    color: #636363;
+    border: 1px solid #cccccc;
+    font-size: 3rem;
+    font-weight: 600;
+    width: 97%;
+    border-radius: .15em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: linear 0.3s;
+}
+
+.overlayTxt_center:hover {
+    background: #393939;
+    color: white;
+}
+
+.form-control, .form-group {
+    margin-bottom: .5em;
+}
+
+section {
+    padding: .5em;
+    padding: 1rem 0 1rem;
+    margin-bottom: .5em;
+}
+
+h2,
+h3 {
+    padding: 2rem 0 0.75rem;
+    font-weight: 700;
+    color: #4b4b4b;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #1008ff;
+    cursor: pointer;
+}
+
+/*Header Section Styles*/
+.header {
+    z-index: 999;
+    position: sticky;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    top: 0;
+}
+
+.hero {
+    position: relative;
+    height: 16.3vh;
+    z-index: -2;
+    background: url("../img/skyline.jpg") center/cover no-repeat;
+}
+
+.overlay {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/* Navbar The interesting stuff */
+.navbar {
+    border: none;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.navSpace {
+    margin-bottom: .5em;
+}
+
+.navbar-brand {
+    font-size: 2.25rem;
+    padding: 0;
+    margin: 0;
+    padding-top: 1em;
+    font-weight: 900;
+    color: #fffdfd;
+}
+
+.navbar--size--xl {
+    padding: 0rem 0;
+
+}
+
+.navbar--size--lg {
+    padding: 1rem 0;
+}
+
+.navbar--size--md {
+    padding: 0rem 0;
+}
+
+.navbar--size--sm {
+    padding: 0;
+}
+
+.navbar--color--secondary {
+
+    background-image: url("https://images.unsplash.com/photo-1470181942237-78ce33fec141?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.navbar--color--white {
+    background: #fff;
+}
+.navbar--color--ghost {
+    background: rgba(0, 0, 0, 0.0);
+}
+
+.navbar--color--ghost .navbar-brand,
+.navbar--color--ghost,
+.navbar--color--ghost a {
+    color: #fff;
+}
+
+.navbar-text {
+    color: #2b2b2b!important;
+}
+
+.navbar.main-nav, .navbar.sub-nav {
+    position: relative;
+    border-radius: 0;
+    padding: 0;
+    /*background-color: rgba(0, 0, 0, 0.6);*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: 0;
+}
+
+.navbar.main-nav .nav-item, .navbar.sub-nav .nav-item {
+    position: relative;
+    padding: .25em 0;
+}
+
+.navbar.main-nav .nav-item, .navbar.main-nav .nav-item .nav-link, .navbar.sub-nav .nav-item, .navbar.sub-nav .nav-item .nav-link {
+    -webkit-transition: color .5s ease;
+    transition: color .5s ease;
+}
+
+.navbar.main-nav .nav-item:hover .nav-link, .navbar.main-nav .nav-item.hover .nav-link, .navbar.main-nav .nav-item.active .nav-link, .navbar.sub-nav .nav-item:hover .nav-link, .navbar.sub-nav .nav-item.hover .nav-link, .navbar.sub-nav .nav-item.active .nav-link {
+}
+
+.navbar.main-nav {
+    width:100%;
+    border-bottom: .2em solid #1008ff;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.navbar.main-nav .nav-item, .navbar.main-nav .nav-item .nav-link {
+
+}
+
+.navbar.main-nav .nav-item.active:after {
+    display: block;
+    content: '';
+    position: relative;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: .4em solid transparent;
+    border-right: .4em solid transparent;
+    border-bottom: .4em solid #fffdfd;
+    margin-left: -.4em;
+}
+
+.mynav {
+    background-color: white!important;
+    width:100%;
+}
+
+.navbar.sub-nav {
+    position: relative;
+    margin-top: -1.3em;
+    background-color: rgba(255, 255, 255, 0.0);
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar.sub-nav .navbar-nav:not(.active) {
+    display: none;
+}
+
+.navbar.sub-nav .nav-item, .navbar.sub-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar.sub-nav.nav-item, .navbar.sub-nav .nav-link:hover {
+    color: #dd303d;
+}
+
+.transnav {
+    margin-top: 1rem;
+    height: .2rem;
+    margin-bottom: 5.2rem;
+    z-index: 1
+}
+
+.transtext {
+    margin-top: -1.2rem;
+    float: right;
+    padding-right: 2.5em;
+    height: .25rem;
+    left: 90%;
+    margin-bottom: 0;
+    z-index: 1
+}
+
+.mobtranstext {
+    width: auto;
+    margin-top: 10%;
+    margin-left: 10%;
+    height: .25rem;
+    margin-bottom: 0;
+    display: none;
+    z-index: 1
+}
+
+/*Navbar logo animations*/
+.logoglow {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5em;
+    color: rgb(48, 58, 194);
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+/*Navbar logo animations*/
+.logoglow1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5em;
+    color: rgb(236, 217, 55);
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes logoglow {
+    from {
+        text-shadow: 0 0 .01px #aaaaaa, 0 0 .015px #7a7a7a, 0 0 .025px #e60073, 0 0 .03px #000000, 0 0 .015px #e60073, 0 0 .025px #e60073, 0 0 .015px #e60073;
+    }
+    to {
+        text-shadow: 0 0 .01px #aaaaaa, 0 0 .005px #7a7a7a, 0 0 .025px #565be6, 0 0 .01px #090b7f, 0 0 .025px #e60073, 0 0 .01px #ff4da6, 0 0 .025px #fff;
+    }
+}
+
+.logoguide {
+    color: #ffffff;
+}
+
+.logoglow {
+    color: #fffdfd;
+    border: 1px black;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes logoglow {
+    from {
+        text-shadow: 0 0 .01px #ffe300, 0 0 .015px #ffe300, 0 0 .025px #e6e600, 0 0 .03px #ffe300, 0 0 .015px #e60073, 0 0 .025px #e60073, 0 0 .015px #e60073;
+    }
+    to {
+        text-shadow: 0 0 .01px #1008ff, 0 0 .005px #1008ff, 0 0 .025px #1008ff, 0 0 .01px #1008ff, 0 0 .025px #e60073, 0 0 .01px #ff4da6, 0 0 .025px #fff;
+    }
+}
+
+.flameglow {
+    color: #fbd021;
+    border: 2px black;
+}
+
+
+.glow {
+    color: #1008ff;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #1008ff, 0 0 20px #1008ff, 0 0 30px #1008ff, 0 0 40px #1008ff, 0 0 50px #e60073, 0 0 80px #e60073, 0 0 100px #e60073;
+    }
+    to {
+        text-shadow: 0 0 20px #1008ff, 0 0 30px #fffdfd, 0 0 40px #0b6aff, 0 0 50px #000000, 0 0 60px #ff4da6, 0 0 90px #ff4da6, 0 0 110px #ff4da6;
+    }
+}
+
+/*Footer Styles*/
+.footerarea {
+    height: 3rem;
+    padding-bottom: 3rem;
+}
+
+.svg-inline--fa {
+    vertical-align: -0.200em;
+}
+
+.rounded-social-buttons {
+    text-align: center;
+}
+
+.rounded-social-buttons .social-button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 5.0rem;
+    height: 5.0rem;
+    border: 0.125rem solid transparent;
+    text-decoration: none;
+    text-align: center;
+    color: #fefefe;
+    font-size: 1.5625rem;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 4rem;
+    transition: all 0.5s ease;
+    margin-top: 1em;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube, .fa-instagram {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.rounded-social-buttons .social-button.facebook {
+    background: #3b5998;
+}
+
+.rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
+    color: #3b5998;
+    background: #fefefe;
+    border-color: #3b5998;
+}
+
+.rounded-social-buttons .social-button.twitter {
+    background: #55acee;
+}
+
+.rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus {
+    color: #55acee;
+    background: #fefefe;
+    border-color: #55acee;
+}
+
+.rounded-social-buttons .social-button.linkedin {
+    background: #007bb5;
+}
+
+.rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+    color: #007bb5;
+    background: #fefefe;
+    border-color: #007bb5;
+}
+
+.rounded-social-buttons .social-button.youtube {
+    background: #bb0000;
+}
+
+.rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
+    color: #bb0000;
+    background: #fefefe;
+    border-color: #bb0000;
+}
+
+.rounded-social-buttons .social-button.instagram {
+    background: #125688;
+}
+
+.rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
+    color: #125688;
+    background: #fefefe;
+    border-color: #125688;
+}
+
+/*Main (Index) Page Styles*/
+
+/*WEATHER SECTION*/
+.myWeather {
+    padding-top: 1.5em;
+}
+
+.myRoadInfo {
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+.weatherwidget {
+    margin-top: 0em;
+    height: auto;
+}
+
+.myWeatherWidget {
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-bottom: .5em;
+}
+
+.myRSSFeed {
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+#rssOutput {
+    margin-top: -1em;
+    margin-bottom: 1em;
+}
+
+/*GOV INFO SECTION*/
+.myGovInfo {
+    margin-top: 3em;
+}
+
+/*ADS FEED SECTION*/
+.myAdFeed {
+
+}
+
+/*.adresults{*/
+/*    min-width:43vw!important;*/
+/*}*/
+
+.myPostingAd {
+    margin-bottom: 0em;
+}
+
+.myAdFeeds {
+    padding-right: 2em;
+    text-left: auto;
+}
+
+.recentAds {
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.recentAds a {
+    color: black;
+}
+
+.recentPosts {
+    height: 300px;
+    overflow: hidden;
+}
+
+.recentPosts a {
+    color: black;
+}
+
+/*Forum Listings*/
+.myUForumFeed {
+    margin-top: 1em;
+}
+
+.myMakeForumPost {
+    margin-top: 1em;
+    background: white;
+}
+
+/*SIGN UP SECTION*/
+.mySignUp {
+    margin-top: -1em;
+}
+
+.mySignUpContent {
+    margin-top: -1em;
+    margin-bottom: 1em;
+}
+
+/*Ad Page Styles*/
+#adcontainer {
+    margin-top: .9rem;
+    margin-bottom: 0;
+}
+
+.categoryname {
+    float: right;
+}
+
+.panel-title {
+    font-weight: 400;
+    font-size: 1.1em;
+    color: #000000;
+}
+
+.req_typechkbox {
+    margin-bottom: 1em;
+    margin-right: 1em;
+    border: 1px solid #353535;
+    padding: .5em;
+    font-size: .9em;
+}
+
+.directorycontainer {
+    padding: .01em;
+}
+
+#deleteAd {
+    padding-left: 1em;
+    margin-top: .25em;
+    margin-left: 1.25em;
+}
+
+#table {
+    font-size: .8em;
+}
+
+#adkeywords {
+    border: 1px solid rgba(176, 174, 174, 0.56);
+    height: 3.1em;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.61);
+    margin-bottom: .6rem;
+}
+
+#panelreq {
+    padding: .5em;
+    border: 1px solid rgba(176, 174, 174, 0.56);
+    border-radius: 5px;
+    background: #F5F5F5;
+    margin-left: 1.5rem;
+    margin-bottom: .5rem;
+    width: 96.5%;
+}
+
+.panel_ads {
+    padding-bottom: 0;
+    margin-bottom: .75rem;
+}
+
+.ad_reqmobi{
+    text-align: end;
+}
+
+/*Profile Page*/
+.userProfile {
+    margin: 0;
+    padding: 0;
+}
+
+.userInfoCard {
+    width: auto;
+    height: auto;
+    background: #F5F5F5;
+    padding: 1em;
+    border: .25px solid rgba(176, 174, 174, 0.56);
+    border-radius: 10px;
+}
+
+.deleteBtn:after {
+    content: 'удалять';
+}
+
+.removeAdBtn:after {
+    content: 'удалять';
+}
+
+/*Forum Page Styles*/
+.forumcontainer {
+    margin-top: 1em;
+}
+
+/*!* ================ Mostly all common portable devices landscape =================*!*/
+/*!* ----------- Non-Retina Screens ----------- *!*/
+/*@media screen*/
+/*and (min-device-width: 1280px)*/
+/*and (max-device-width: 1600px)*/
+/*and (-webkit-min-device-pixel-ratio: 1) {*/
+/*    !*All hidden classes and ids*!*/
+/*    #myRoadInfo, #adkeywords, #pagesCount, #clearSearch, #searchable, .directorycontainer, .myMkt1,*/
+/*    .myMkt2, .myLBanner, .myRBanner, .wideAdvert, .smallAdvert, #panelreq, .mobileHide {*/
+/*        display: none;*/
+/*    }*/
+
+/*    !*All mobile visible elements*!*/
+/*    #mobileAdCriteria, #mobileAdSearch, .mobtranstext {*/
+/*        display: unset;*/
+/*    }*/
+
+/*    h2{*/
+/*        transform:scale(.9);*/
+/*    }*/
+
+/*    !*Header and Nav Elements*!*/
+/*    .hero {*/
+/*        height: 16vh;*/
+/*    }*/
+
+/*    .navbar--color--secondary {*/
+/*        background: none;*/
+/*    }*/
+
+/*    #mobileAdSearch {*/
+/*        padding: 0;*/
+/*        margin: 0;*/
+/*    }*/
+
+/*    .mobtranstext {*/
+/*        margin: 0;*/
+/*        text-align: right !important;*/
+/*        width: 100%;*/
+/*        margin-top: 5rem;*/
+/*    }*/
+
+/*    .searchbox {*/
+/*        top: -1rem;*/
+/*        transform: scale(.8);*/
+/*    }*/
+
+/*    .searchbox .input.active-width {*/
+/*        width: 400px;*/
+/*    }*/
+
+/*    !*Index Page Specific*!*/
+/*    .OverlayTxt_Container {*/
+/*        position: relative;*/
+/*        text-align: center;*/
+/*        margin-bottom: 2rem;*/
+/*    }*/
+
+/*    .myGovInfo {*/
+/*        margin-top: 1em;*/
+/*    }*/
+
+/*    .myAdCats {*/
+/*        margin-bottom: 2em;*/
+/*    }*/
+
+/*    .myPostAd {*/
+/*        margin-top: -2em;*/
+/*        margin-bottom:6em;*/
+/*    }*/
+
+/*    .myAdFeeds {*/
+/*        margin-bottom: 0;*/
+/*        padding-bottom: 0;*/
+/*    }*/
+
+/*    .myAdListings {*/
+/*        margin-left: 1em;*/
+/*        margin-right: 1em;*/
+/*        margin-top: -2rem;*/
+/*    }*/
+/*    .myForumFeed {*/
+/*        margin-top: -6em;*/
+/*        padding-top:0;*/
+/*    }*/
+
+/*    .myMakeForumPost{*/
+/*        margin-top:-6em;*/
+/*    }*/
+/*    .survey{*/
+/*        margin-top:-2em;*/
+/*    }*/
+
+/*    !*Ad Page Specific*!*/
+/*    .mobileAdSearch {*/
+/*        margin-top: -2em;*/
+/*        margin-bottom: -1.2em;*/
+/*    }*/
+
+/*    #ad_results {*/
+/*        margin-top: -4em;*/
+/*        margin-left: 0em;*/
+/*    }*/
+
+/*    .adresults {*/
+/*        display: block;*/
+/*        margin-top: 0;*/
+/*        margin-left: 0;*/
+/*    }*/
+
+/*    .ad_reqmobi{*/
+/*        text-align: unset;*/
+/*        padding-top:0;*/
+/*        padding-bottom:0;*/
+/*    }*/
+
+/*    .ad-panel-title{*/
+/*        padding-top:0;*/
+/*        padding-bottom:0;*/
+/*    }*/
+
+/*    !*Profile Page Specific*!*/
+/*    .deleteBtn {*/
+/*        transform: scale(.6);*/
+/*        margin-top: -.2em;*/
+/*    }*/
+
+/*    .deleteBtn:after {*/
+/*        content: 'X';*/
+/*    }*/
+
+/*    .removeAdBtn {*/
+/*        transform: scale(.6);*/
+/*        margin-top: -.2em;*/
+/*        float: right;*/
+/*    }*/
+
+/*    .removeAdBtn:after {*/
+/*        content: 'X';*/
+/*    }*/
+
+/*    #delAdBtn {*/
+/*        padding: 0;*/
+/*        margin: 0;*/
+/*        margin-left: -1.6em;*/
+/*    }*/
+/*}*/
+
+/*Query for regular Ipad portrait */
+@media only screen and (min-width: 720px) and (max-height: 1480px)
+and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    /*All hidden classes and ids*/
+    #myRoadInfo, #adkeywords, #pagesCount, #clearSearch, #searchable, .directorycontainer, .myMkt1,
+    .myMkt2, .myLBanner, .myRBanner, .wideAdvert, .smallAdvert, #panelreq, .mobileHide {
+        display: none;
+    }
+
+    /*All mobile visible elements*/
+    #mobileAdCriteria, #mobileAdSearch, .mobtranstext {
+        display: unset;
+    }
+
+    h2{
+        transform:scale(.9);
+    }
+
+    /*Header and Nav Elements*/
+    .hero {
+        height: 16vh;
+    }
+
+    .navbar--color--secondary {
+        background: none;
+    }
+
+    #mobileAdSearch {
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobtranstext {
+        margin: 0;
+        text-align: right !important;
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+    .searchbox {
+        top: -1rem;
+        transform: scale(.8);
+    }
+
+    .searchbox .input.active-width {
+        width: 400px;
+    }
+
+    /*Index Page Specific*/
+    .OverlayTxt_Container {
+        position: relative;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .myGovInfo {
+        margin-top: 1em;
+    }
+
+    .myAdCats {
+        margin-bottom: 2em;
+    }
+
+    .myPostAd {
+        margin-top: -2em;
+        margin-bottom:6em;
+    }
+
+    .myAdFeeds {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .myAdListings {
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: -2rem;
+    }
+    .myForumFeed {
+        margin-top: -6em;
+        padding-top:0;
+    }
+
+    .myMakeForumPost{
+        margin-top:-6em;
+    }
+    .survey{
+        margin-top:-2em;
+    }
+
+    /*Ad Page Specific*/
+    .mobileAdSearch {
+        margin-top: -2em;
+        margin-bottom: -1.2em;
+    }
+
+    #ad_results {
+        margin-top: -4em;
+        margin-left: 0em;
+    }
+
+    .adresults {
+        display: block;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .ad_reqmobi{
+        text-align: unset;
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    .ad-panel-title{
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    /*Profile Page Specific*/
+    .deleteBtn {
+        transform: scale(.6);
+        margin-top: -.2em;
+    }
+
+    .deleteBtn:after {
+        content: 'X';
+    }
+
+    .removeAdBtn {
+        transform: scale(.6);
+        margin-top: -.2em;
+        float: right;
+    }
+
+    .removeAdBtn:after {
+        content: 'X';
+    }
+
+    #delAdBtn {
+        padding: 0;
+        margin: 0;
+        margin-left: -1.6em;
+    }
+}/*Query for regular Ipad portrait */
+@media only screen and (min-width: 720px) and (max-height: 1480px)
+and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    /*All hidden classes and ids*/
+    #myRoadInfo, #adkeywords, #pagesCount, #clearSearch, #searchable, .directorycontainer, .myMkt1,
+    .myMkt2, .myLBanner, .myRBanner, .wideAdvert, .smallAdvert, #panelreq, .mobileHide {
+        display: none;
+    }
+
+    /*All mobile visible elements*/
+    #mobileAdCriteria, #mobileAdSearch, .mobtranstext {
+        display: unset;
+    }
+
+    h2{
+        transform:scale(.9);
+    }
+
+    /*Header and Nav Elements*/
+    .hero {
+        height: 16vh;
+    }
+
+    .navbar--color--secondary {
+        background: none;
+    }
+
+    #mobileAdSearch {
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobtranstext {
+        margin: 0;
+        text-align: right !important;
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+    .searchbox {
+        top: -1rem;
+        transform: scale(.8);
+    }
+
+    .searchbox .input.active-width {
+        width: 400px;
+    }
+
+    /*Index Page Specific*/
+    .OverlayTxt_Container {
+        position: relative;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .myGovInfo {
+        margin-top: 1em;
+    }
+
+    .myAdCats {
+        margin-bottom: 2em;
+    }
+
+    .myPostAd {
+        margin-top: -2em;
+        margin-bottom:6em;
+    }
+
+    .myAdFeeds {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .myAdListings {
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: -2rem;
+    }
+    .myForumFeed {
+        margin-top: -6em;
+        padding-top:0;
+    }
+
+    .myMakeForumPost{
+        margin-top:-6em;
+    }
+    .survey{
+        margin-top:-2em;
+    }
+
+    /*Ad Page Specific*/
+    .mobileAdSearch {
+        margin-top: -2em;
+        margin-bottom: -1.2em;
+    }
+
+    #ad_results {
+        margin-top: -4em;
+        margin-left: 0em;
+    }
+
+    .adresults {
+        display: block;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .ad_reqmobi{
+        text-align: unset;
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    .ad-panel-title{
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    /*Profile Page Specific*/
+    .deleteBtn {
+        transform: scale(.6);
+        margin-top: -.2em;
+    }
+
+    .deleteBtn:after {
+        content: 'X';
+    }
+
+    .removeAdBtn {
+        transform: scale(.6);
+        margin-top: -.2em;
+        float: right;
+    }
+
+    .removeAdBtn:after {
+        content: 'X';
+    }
+
+    #delAdBtn {
+        padding: 0;
+        margin: 0;
+        margin-left: -1.6em;
+    }
+}
+/*Query for regular Ipad portrait */
+@media only screen and (min-width: 768px) and (max-height: 1024px)
+and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+    /*All hidden classes and ids*/
+    #myRoadInfo, #adkeywords, #pagesCount, #clearSearch, #searchable, .directorycontainer, .myMkt1,
+    .myMkt2, .myLBanner, .myRBanner, .wideAdvert, .smallAdvert, #panelreq, .mobileHide {
+        display: none;
+    }
+
+    /*All mobile visible elements*/
+    #mobileAdCriteria, #mobileAdSearch, .mobtranstext {
+        display: unset;
+    }
+
+    h2{
+        transform:scale(.9);
+    }
+
+    /*Header and Nav Elements*/
+    .hero {
+        height: 16vh;
+    }
+
+    .navbar--color--secondary {
+        background: none;
+    }
+
+    #mobileAdSearch {
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobtranstext {
+        margin: 0;
+        text-align: right !important;
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+    .searchbox {
+        top: -1rem;
+        transform: scale(.8);
+    }
+
+    .searchbox .input.active-width {
+        width: 400px;
+    }
+
+    /*Index Page Specific*/
+    .OverlayTxt_Container {
+        position: relative;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .myGovInfo {
+        margin-top: 1em;
+    }
+
+    .myAdCats {
+        margin-bottom: 2em;
+    }
+
+    .myPostAd {
+        margin-top: -2em;
+        margin-bottom:6em;
+    }
+
+    .myAdFeeds {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .myAdListings {
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: -2rem;
+    }
+    .myForumFeed {
+        margin-top: -6em;
+        padding-top:0;
+    }
+
+    .myMakeForumPost{
+        margin-top:-6em;
+    }
+    .survey{
+        margin-top:-2em;
+    }
+
+    /*Ad Page Specific*/
+    .mobileAdSearch {
+        margin-top: -2em;
+        margin-bottom: -1.2em;
+    }
+
+    #ad_results {
+        margin-top: -4em;
+        margin-left: 0em;
+    }
+
+    .adresults {
+        display: block;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .ad_reqmobi{
+        text-align: unset;
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    .ad-panel-title{
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    /*Profile Page Specific*/
+    .deleteBtn {
+        transform: scale(.6);
+        margin-top: -.2em;
+    }
+
+    .deleteBtn:after {
+        content: 'X';
+    }
+
+    .removeAdBtn {
+        transform: scale(.6);
+        margin-top: -.2em;
+        float: right;
+    }
+
+    .removeAdBtn:after {
+        content: 'X';
+    }
+
+    #delAdBtn {
+        padding: 0;
+        margin: 0;
+        margin-left: -1.6em;
+    }
+}
+
+@media only screen and (max-width: 414px) and (orientation: portrait) {
+    /*All hidden classes and ids*/
+    .myRoadInfo, #adkeywords, #pagesCount, #clearSearch, #searchable, .directorycontainer, .myMkt1,
+    .myMkt2, .myLBanner, .myRBanner, .wideAdvert, .smallAdvert, #panelreq. mobileHide {
+        display: none;
+    }
+
+    /*All mobile visible elements*/
+    #mobileAdCriteria, #mobileAdSearch, .mobtranstext {
+        display: unset;
+    }
+
+    #mobileAdSearch {
+        height: unset;
+    }
+}
+
+@media only screen and (max-width: 411px) and (orientation: portrait) {
+    /*All hidden classes and ids*/
+    #myRoadInfo, #adkeywords, #pagesCount, #clearSearch, #searchable, .directorycontainer, .myMkt1,
+    .myMkt2, .myLBanner, .myRBanner, .wideAdvert, .smallAdvert, #panelreq, .mobileHide {
+        display: none;
+    }
+
+    /*All mobile visible elements*/
+    #mobileAdCriteria, #mobileAdSearch, .mobtranstext {
+        display: unset;
+    }
+
+    h2{
+        transform:scale(.9);
+    }
+
+    /*Header and Nav Elements*/
+    .hero {
+        height: 16vh;
+    }
+
+    .navbar--color--secondary {
+        background: none;
+    }
+
+    #mobileAdSearch {
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobtranstext {
+        margin: 0;
+        text-align: right !important;
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+    .searchbox {
+        top: -1rem;
+        transform: scale(.8);
+    }
+
+    .searchbox .input.active-width {
+        width: 400px;
+    }
+
+    /*Index Page Specific*/
+    .OverlayTxt_Container {
+        position: relative;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .myGovInfo {
+        margin-top: 1em;
+    }
+
+    .myAdCats {
+        margin-bottom: 2em;
+    }
+
+    .myPostAd {
+        margin-top: -2em;
+        margin-bottom:6em;
+    }
+
+    .myAdFeeds {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .myAdListings {
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: -2rem;
+    }
+    .myForumFeed {
+        margin-top: -6em;
+        padding-top:0;
+    }
+
+    .myMakeForumPost{
+        margin-top:-6em;
+    }
+    .survey{
+        margin-top:-2em;
+    }
+
+    /*Ad Page Specific*/
+    .mobileAdSearch {
+        margin-top: -2em;
+        margin-bottom: -1.2em;
+    }
+
+    #ad_results {
+        margin-top: -4em;
+        margin-left: 0em;
+    }
+
+    .adresults {
+        display: block;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .ad_reqmobi{
+        text-align: unset;
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    .ad-panel-title{
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    /*Profile Page Specific*/
+    .deleteBtn {
+        transform: scale(.6);
+        margin-top: -.2em;
+    }
+
+    .deleteBtn:after {
+        content: 'X';
+    }
+
+    .removeAdBtn {
+        transform: scale(.6);
+        margin-top: -.2em;
+        float: right;
+    }
+
+    .removeAdBtn:after {
+        content: 'X';
+    }
+
+    #delAdBtn {
+        padding: 0;
+        margin: 0;
+        margin-left: -1.6em;
+    }
+}
+
+/* Portrait iphonex*/
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {
+    /*All hidden classes and ids*/
+    #myRoadInfo, #adkeywords, #pagesCount, #clearSearch, #searchable, .directorycontainer, .myMkt1,
+    .myMkt2, .myLBanner, .myRBanner, .wideAdvert, .smallAdvert, #panelreq, .mobileHide {
+        display: none;
+    }
+
+    /*All mobile visible elements*/
+    #mobileAdCriteria, #mobileAdSearch, .mobtranstext {
+        display: unset;
+    }
+
+    h2{
+        transform:scale(.9);
+    }
+
+    /*Header and Nav Elements*/
+    .hero {
+        height: 16vh;
+    }
+
+    .navbar--color--secondary {
+        background: none;
+    }
+
+    #mobileAdSearch {
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobtranstext {
+        margin: 0;
+        text-align: right !important;
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+    .searchbox {
+        top: -1rem;
+        transform: scale(.8);
+    }
+
+    .searchbox .input.active-width {
+        width: 400px;
+    }
+
+    /*Index Page Specific*/
+    .OverlayTxt_Container {
+        position: relative;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .myGovInfo {
+        margin-top: 1em;
+    }
+
+    .myAdCats {
+        margin-bottom: 2em;
+    }
+
+    .myPostAd {
+        margin-top: -2em;
+        margin-bottom:6em;
+    }
+
+    .myAdFeeds {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .myAdListings {
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: -2rem;
+    }
+    .myForumFeed {
+        margin-top: -6em;
+        padding-top:0;
+    }
+
+    .myMakeForumPost{
+        margin-top:-6em;
+    }
+    .survey{
+        margin-top:-2em;
+    }
+
+    /*Ad Page Specific*/
+    .mobileAdSearch {
+        margin-top: -2em;
+        margin-bottom: -1.2em;
+    }
+
+    #ad_results {
+        margin-top: -4em;
+        margin-left: 0em;
+    }
+
+    .adresults {
+        display: block;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .ad_reqmobi{
+        text-align: unset;
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    .ad-panel-title{
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    /*Profile Page Specific*/
+    .deleteBtn {
+        transform: scale(.6);
+        margin-top: -.2em;
+    }
+
+    .deleteBtn:after {
+        content: 'X';
+    }
+
+    .removeAdBtn {
+        transform: scale(.6);
+        margin-top: -.2em;
+        float: right;
+    }
+
+    .removeAdBtn:after {
+        content: 'X';
+    }
+
+    #delAdBtn {
+        padding: 0;
+        margin: 0;
+        margin-left: -1.6em;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) {
+    /*All hidden classes and ids*/
+    #myRoadInfo, #adkeywords, #pagesCount, #clearSearch, #searchable, .directorycontainer, .myMkt1,
+    .myMkt2, .myLBanner, .myRBanner, .wideAdvert, .smallAdvert, #panelreq, .mobileHide {
+        display: none;
+    }
+
+    /*All mobile visible elements*/
+    #mobileAdCriteria, #mobileAdSearch, .mobtranstext {
+        display: unset;
+    }
+
+    h2{
+        transform:scale(.9);
+    }
+
+    /*Header and Nav Elements*/
+    .hero {
+        height: 16vh;
+    }
+
+    .navbar--color--secondary {
+        background: none;
+    }
+
+    #mobileAdSearch {
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobtranstext {
+        margin: 0;
+        text-align: right !important;
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+    .searchbox {
+        top: -1rem;
+        transform: scale(.8);
+    }
+
+    .searchbox .input.active-width {
+        width: 400px;
+    }
+
+    /*Index Page Specific*/
+    .OverlayTxt_Container {
+        position: relative;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .myGovInfo {
+        margin-top: 1em;
+    }
+
+    .myAdCats {
+        margin-bottom: 2em;
+    }
+
+    .myPostAd {
+        margin-top: -2em;
+        margin-bottom:6em;
+    }
+
+    .myAdFeeds {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .myAdListings {
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: -2rem;
+    }
+    .myForumFeed {
+        margin-top: -6em;
+        padding-top:0;
+    }
+
+    .myMakeForumPost{
+        margin-top:-6em;
+    }
+    .survey{
+        margin-top:-2em;
+    }
+
+    /*Ad Page Specific*/
+    .mobileAdSearch {
+        margin-top: -2em;
+        margin-bottom: -1.2em;
+    }
+
+    #ad_results {
+        margin-top: -4em;
+        margin-left: 0em;
+    }
+
+    .adresults {
+        display: block;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .ad_reqmobi{
+        text-align: unset;
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    .ad-panel-title{
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    /*Profile Page Specific*/
+    .deleteBtn {
+        transform: scale(.6);
+        margin-top: -.2em;
+    }
+
+    .deleteBtn:after {
+        content: 'X';
+    }
+
+    .removeAdBtn {
+        transform: scale(.6);
+        margin-top: -.2em;
+        float: right;
+    }
+
+    .removeAdBtn:after {
+        content: 'X';
+    }
+
+    #delAdBtn {
+        padding: 0;
+        margin: 0;
+        margin-left: -1.6em;
+    }
+
+}
+
+/*Query for regular Ipad portrait */
+@media only screen and (min-width: 360px) and (max-height: 740px)
+and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    /*All hidden classes and ids*/
+    #myRoadInfo, #adkeywords, #pagesCount, #clearSearch, #searchable, .directorycontainer, .myMkt1,
+    .myMkt2, .myLBanner, .myRBanner, .wideAdvert, .smallAdvert, #panelreq, .mobileHide {
+        display: none;
+    }
+
+    /*All mobile visible elements*/
+    #mobileAdCriteria, #mobileAdSearch, .mobtranstext {
+        display: unset;
+    }
+
+    h2{
+        transform:scale(.9);
+    }
+
+    /*Header and Nav Elements*/
+    .hero {
+        height: 16vh;
+    }
+
+    .navbar--color--secondary {
+        background: none;
+    }
+
+    #mobileAdSearch {
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobtranstext {
+        margin: 0;
+        text-align: right !important;
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+    .searchbox {
+        top: -1rem;
+        transform: scale(.8);
+    }
+
+    .searchbox .input.active-width {
+        width: 400px;
+    }
+
+    /*Index Page Specific*/
+    .OverlayTxt_Container {
+        position: relative;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .myGovInfo {
+        margin-top: 1em;
+    }
+
+    .myAdCats {
+        margin-bottom: 2em;
+    }
+
+    .myPostAd {
+        margin-top: -2em;
+        margin-bottom:6em;
+    }
+
+    .myAdFeeds {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .myAdListings {
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: -2rem;
+    }
+    .myForumFeed {
+        margin-top: -6em;
+        padding-top:0;
+    }
+
+    .myMakeForumPost{
+        margin-top:-6em;
+    }
+    .survey{
+        margin-top:-2em;
+    }
+
+    /*Ad Page Specific*/
+    .mobileAdSearch {
+        margin-top: -2em;
+        margin-bottom: -1.2em;
+    }
+
+    #ad_results {
+        margin-top: -4em;
+        margin-left: 0em;
+    }
+
+    .adresults {
+        display: block;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .ad_reqmobi{
+        text-align: unset;
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    .ad-panel-title{
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    /*Profile Page Specific*/
+    .deleteBtn {
+        transform: scale(.6);
+        margin-top: -.2em;
+    }
+
+    .deleteBtn:after {
+        content: 'X';
+    }
+
+    .removeAdBtn {
+        transform: scale(.6);
+        margin-top: -.2em;
+        float: right;
+    }
+
+    .removeAdBtn:after {
+        content: 'X';
+    }
+
+    #delAdBtn {
+        padding: 0;
+        margin: 0;
+        margin-left: -1.6em;
+    }
+}
+
+@media only screen and (max-width: 360px) and (orientation: portrait) {
+    /*All hidden classes and ids*/
+    #myRoadInfo, #adkeywords, #pagesCount, #clearSearch, #searchable, .directorycontainer, .myMkt1,
+    .myMkt2, .myLBanner, .myRBanner, .wideAdvert, .smallAdvert, #panelreq, .mobileHide {
+        display: none;
+    }
+
+    /*All mobile visible elements*/
+    #mobileAdCriteria, #mobileAdSearch, .mobtranstext {
+        display: unset;
+    }
+
+    h2{
+        transform:scale(.9);
+    }
+
+    /*Header and Nav Elements*/
+    .hero {
+        height: 16vh;
+    }
+
+    .navbar--color--secondary {
+        background: none;
+    }
+
+    #mobileAdSearch {
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobtranstext {
+        margin: 0;
+        text-align: right !important;
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+    .searchbox {
+        top: -1rem;
+        transform: scale(.8);
+    }
+
+    .searchbox .input.active-width {
+        width: 400px;
+    }
+
+    /*Index Page Specific*/
+    .OverlayTxt_Container {
+        position: relative;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .myGovInfo {
+        margin-top: 1em;
+    }
+
+    .myAdCats {
+        margin-bottom: 2em;
+    }
+
+    .myPostAd {
+        margin-top: -2em;
+        margin-bottom:6em;
+    }
+
+    .myAdFeeds {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .myAdListings {
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: -2rem;
+    }
+    .myForumFeed {
+        margin-top: -6em;
+        padding-top:0;
+    }
+
+    .myMakeForumPost{
+        margin-top:-6em;
+    }
+    .survey{
+        margin-top:-2em;
+    }
+
+    /*Ad Page Specific*/
+    .mobileAdSearch {
+        margin-top: -2em;
+        margin-bottom: -1.2em;
+    }
+
+    #ad_results {
+        margin-top: -4em;
+        margin-left: 0em;
+    }
+
+    .adresults {
+        display: block;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .ad_reqmobi{
+        text-align: unset;
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    .ad-panel-title{
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    /*Profile Page Specific*/
+    .deleteBtn {
+        transform: scale(.6);
+        margin-top: -.2em;
+    }
+
+    .deleteBtn:after {
+        content: 'X';
+    }
+
+    .removeAdBtn {
+        transform: scale(.6);
+        margin-top: -.2em;
+        float: right;
+    }
+
+    .removeAdBtn:after {
+        content: 'X';
+    }
+
+    #delAdBtn {
+        padding: 0;
+        margin: 0;
+        margin-left: -1.6em;
+    }
+
+}
+
+/*NEXT*/
+/* Extra small devices (iphone 5 and SE, iphone 6,7,8  and down) at portrait */
+
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+    /*All hidden classes and ids*/
+    #myRoadInfo, #adkeywords, #pagesCount, #clearSearch, #searchable, .directorycontainer, .myMkt1,
+    .myMkt2, .myLBanner, .myRBanner, .wideAdvert, .smallAdvert, #panelreq, .mobileHide {
+        display: none;
+    }
+
+    /*All mobile visible elements*/
+    #mobileAdCriteria, #mobileAdSearch, .mobtranstext {
+        display: unset;
+    }
+
+    h2{
+        transform:scale(.9);
+    }
+
+    /*Header and Nav Elements*/
+    .hero {
+        height: 16vh;
+    }
+
+    .navbar--color--secondary {
+        background: none;
+    }
+
+    #mobileAdSearch {
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobtranstext {
+        margin: 0;
+        text-align: right !important;
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+    .searchbox {
+        top: -1rem;
+        transform: scale(.8);
+    }
+
+    .searchbox .input.active-width {
+        width: 400px;
+    }
+
+    /*Index Page Specific*/
+    .OverlayTxt_Container {
+        position: relative;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .myGovInfo {
+        margin-top: 1em;
+    }
+
+    .myAdCats {
+        margin-bottom: 2em;
+    }
+
+    .myPostAd {
+        margin-top: -2em;
+        margin-bottom:6em;
+    }
+
+    .myAdFeeds {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .myAdListings {
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: -2rem;
+    }
+    .myForumFeed {
+        margin-top: -6em;
+        padding-top:0;
+    }
+
+    .myMakeForumPost{
+        margin-top:-6em;
+    }
+    .survey{
+        margin-top:-2em;
+    }
+
+    /*Ad Page Specific*/
+    .mobileAdSearch {
+        margin-top: -2em;
+        margin-bottom: -1.2em;
+    }
+
+    #ad_results {
+        margin-top: -4em;
+        margin-left: 0em;
+    }
+
+    .adresults {
+        display: block;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .ad_reqmobi{
+        text-align: unset;
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    .ad-panel-title{
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    /*Profile Page Specific*/
+    .deleteBtn {
+        transform: scale(.6);
+        margin-top: -.2em;
+    }
+
+    .deleteBtn:after {
+        content: 'X';
+    }
+
+    .removeAdBtn {
+        transform: scale(.6);
+        margin-top: -.2em;
+        float: right;
+    }
+
+    .removeAdBtn:after {
+        content: 'X';
+    }
+
+    #delAdBtn {
+        padding: 0;
+        margin: 0;
+        margin-left: -1.6em;
+    }
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+    /*All hidden classes and ids*/
+    #myRoadInfo, #adkeywords, #pagesCount, #clearSearch, #searchable, .directorycontainer, .myMkt1,
+    .myMkt2, .myLBanner, .myRBanner, .wideAdvert, .smallAdvert, #panelreq. mobileHide {
+        display: none;
+    }
+
+    /*All mobile visible elements*/
+    #mobileAdCriteria, #mobileAdSearch, .mobtranstext {
+        display: unset;
+    }
+
+    #mobileAdSearch {
+        height: unset;
+    }
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 411px)
+and (max-device-width: 823px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+    /*All hidden classes and ids*/
+    #myRoadInfo, #adkeywords, #pagesCount, #clearSearch, #searchable, .directorycontainer, .myMkt1,
+    .myMkt2, .myLBanner, .myRBanner, .wideAdvert, .smallAdvert, #panelreq. mobileHide {
+        display: none;
+    }
+
+    /*All mobile visible elements*/
+    #mobileAdCriteria, #mobileAdSearch, .mobtranstext {
+        display: unset;
+    }
+
+    #mobileAdSearch {
+        height: unset;
+    }
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 411px)
+and (max-device-width: 731px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+    /*All hidden classes and ids*/
+    #myRoadInfo, #adkeywords, #pagesCount, #clearSearch, #searchable, .directorycontainer, .myMkt1,
+    .myMkt2, .myLBanner, .myRBanner, .wideAdvert, .smallAdvert, #panelreq. mobileHide {
+        display: none;
+    }
+
+    /*All mobile visible elements*/
+    #mobileAdCriteria, #mobileAdSearch, .mobtranstext {
+        display: unset;
+    }
+
+    #mobileAdSearch {
+        height: unset;
+    }
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 360px)
+and (max-device-width: 640px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+    /*All hidden classes and ids*/
+    #myRoadInfo, #adkeywords, #pagesCount, #clearSearch, #searchable, .directorycontainer, .myMkt1,
+    .myMkt2, .myLBanner, .myRBanner, .wideAdvert, .smallAdvert, #panelreq. mobileHide {
+        display: none;
+    }
+
+    /*All mobile visible elements*/
+    #mobileAdCriteria, #mobileAdSearch, .mobtranstext {
+        display: unset;
+    }
+
+    #mobileAdSearch {
+        height: unset;
+    }
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+    /*All hidden classes and ids*/
+   #myRoadInfo, #adkeywords, #pagesCount, #clearSearch, #searchable, .directorycontainer, .myMkt1,
+    .myMkt2, .myLBanner, .myRBanner, .wideAdvert, .smallAdvert, #panelreq. mobileHide {
+        display: none;
+    }
+
+    /*All mobile visible elements*/
+    #mobileAdCriteria, #mobileAdSearch, .mobtranstext {
+        display: unset;
+    }
+
+    #mobileAdSearch {
+        height: unset;
+    }
+}
+
+.femContainer, .menContainer, .ftr1Container .ftr2Container {
+    height: 20em;
+}
+
+.femContainer, .menContainer, .ftr1Container, .ftr1Container img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.altImage {
+    filter: grayscale(100%);
+    -webkit-filter:grayscale(100%);
+}
+
+#mainContainer {
+    display: grid;
+    grid-template-areas: "fem men" "jrsm jrsm" "stuff stuff" "about about" "tos tos" "log log";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, auto 1fr);
+    grid-gap: .25em;
+    overflow: hidden;
+}
+.femContainer, .menContainer, .ftr1Container .ftr2Container {
+    height: 20em;
+}
+
+.femContainer, .menContainer, .ftr1Container, .ftr1Container img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.altImage img:hover, .altImage-color {
+    filter: grayscale(0);
+    -webkit-filter:grayscale(0);
+}
+
+.femContainer {
+    grid-area: fem;
+}
+.menContainer {
+    grid-area: men;
+}
+.ftr1Container {
+    display: none;
+    grid-area: feat1;
+}
+.ftr2Container {
+    display: none;
+    grid-area: feat2;
+}
+
+/* Overlay on hover */
+/* New overlay on hover */
+.overlay-image .hover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    opacity: 0;
+    transition: .5s ease;
+    opacity: 0;
+}
+
+/* New overlay appearance on hover */
+.overlay-image:hover .hover {
+    opacity: 1;
+}
+
+/********* Simple or original overlay *******/
+/* Main container */
+.overlay-image {
+    position: relative;
+    width: 100%;
+}
+
+/* Original image */
+.overlay-image .image {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+/********* Background and text only overlay on hover *******/
+.overlay-image .normal {
+    transition: .9s ease;
+}
+
+.overlay-image:hover .normal {
+    opacity: 0;
+}
+
+.overlay-image .hover {
+}
+
+/* Original text overlay */
+.overlay-image .text {
+    color: #fff;
+    font-size: 1.5em;
+    bottom: 0%;
+    left: 50%;
+    line-height: 1.5em;
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    transition: 1s;
+    width: 100%;
+    display: inline-block;
+    background: rgba(53, 54, 58, 0.75);
+}
+
+.overlay-image:hover .text {
+    padding: .25em;
+    bottom: 1.0%;
+    height: 25%;
+    left: 50%;
+    text-align: justify;
+    font-size: .9em;
+    transition: linear 1s ease;
+    background: rgba(53, 54, 58, 0.75);
+}
+
+/* Main container */
+.overlay-imageq {
+    position: relative;
+    width: 100%;
+}
+
+/* Original image */
+.overlay-imageq .image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Original text overlay */
+.overlay-imageq .text {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #fff;
+    font-size: 3em;
+    line-height: 1.5em;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+/* New overlay on hover */
+.overlay-imageq .hover {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+/* New overlay appearance on hover */
+.overlay-imageq:hover .hover {
+    opacity: 1;
+}
+

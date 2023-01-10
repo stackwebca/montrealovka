@@ -1,0 +1,461 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    margin-bottom: 5em; /*adjust for height of footer*/
+    height: auto;
+}
+
+body {
+    background: #FFFFFF;
+    margin-top: 1em;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: white;
+    z-index: 1;
+}
+
+.navbar li a {
+    color: white !important;
+}
+
+.navbar li a:hover {
+    color: yellow !important;
+}
+
+/* Utility Classes Section */
+.hero {
+    max-height: 400px;
+}
+
+/*Utility Stuff*/
+#backtop {
+    position: fixed;
+    left: 50px;
+    right: auto;
+    top: auto;
+    bottom: 125px;
+    outline: none;
+    overflow: hidden;
+    color: #ff3928;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    line-height: 40px;
+    font-size: 50px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    z-index: 999999;
+    opacity: 1;
+    display: none;
+}
+
+#backtop:hover {
+    background-color: #787878;
+}
+
+#backtop.mcOut {
+    opacity: 0;
+}
+
+.blink_me {
+    animation: blinker 1500ms linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* ---------------- For sticky header: class="float-panel"  ------------------*/
+.float-panel {
+    width: 100%;
+    background: white;
+    z-index: 300;
+    padding: 30px 0;
+    transform: translateZ(0);
+    transition: all 0.5s; /* Effect for switching from .fixed to static */
+}
+
+.float-panel .content-area {
+    margin: 10px auto;
+}
+
+.float-panel a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #444;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.float-panel .fa-gg {
+    color: #F0595C;
+    font-size: 30px;
+    vertical-align: middle;
+    transition: all 1s;
+}
+
+/* when class="float-panel fixed" */
+.fixed {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 4px 0;
+    animation: slide-down 0.7s;
+    opacity: 0.9;
+}
+
+.fixed .fa-gg {
+    transform: rotate(360deg);
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+}
+
+/* ---------------- For Animation on Scroll ---------------- */
+.slideanim {
+    visibility: hidden;
+    visibility: visible \9; /*For old IE browsers IE6-8 */
+}
+
+.slideanim.slide {
+    visibility: visible;
+    animation: slide 2s;
+}
+
+.slideanim::after {
+    /* useful when its child elements are float:left; */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Style Scroll*/
+.scrollable {
+    height: 18.75em;
+    overflow-y: scroll;
+}
+
+.scrollable::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(250, 250, 245, 0.3);
+    background-color: #F5F5F5;
+}
+
+.scrollable::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+    /*background-color: #d90c00;*/
+    /*border: 1px solid #fafaf5;*/
+    /*border-radius:5%;*/
+}
+
+/* Center Text Over Image */
+/* Container holding the image and the text */
+.container-overlay {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+/* Top left text */
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+/* Top right text */
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Overlays */
+.image-container {
+    position: relative;
+    width: 200px;
+    height: 300px;
+}
+
+.image-container .after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    color: #FFF;
+}
+
+.image-container:hover .after {
+    display: block;
+    background: rgba(0, 0, 0, .6);
+}
+
+/* Header Section */
+
+/* Section 1 */
+/* Section 2 */
+
+.map {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#googleMap {
+    /*background: #ffffff;  */
+    min-height: 270px;
+    min-width: 270px;
+    object-fit: fill;
+    opacity: 1;
+    border-radius: 2.5%;
+}
+
+/* Section 3 */
+/* Section 4 */
+/* Section 5 */
+/* Section 6 */
+/* Section 7 */
+
+.footer {
+    position: fixed;
+    width: 100%;
+    /*max-width: 1100px;*/
+    color: white;
+    margin-top: .5em;
+    bottom: 0;
+}
+
+.rounded-social-buttons {
+    text-align: center;
+}
+
+.rounded-social-buttons .social-button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border: 0.125rem solid transparent;
+    text-decoration: none;
+    text-align: center;
+    color: #fefefe;
+    font-size: .5rem;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 4rem;
+    transition: all 0.5s ease;
+    margin-top: .25em;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube, .fa-instagram {
+    font-size: 20px;
+    margin-top: 4px;
+}
+
+.rounded-social-buttons .social-button.facebook {
+    background: #3b5998;
+}
+
+.rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
+    color: #3b5998;
+    background: #fefefe;
+    border-color: #3b5998;
+}
+
+.rounded-social-buttons .social-button.twitter {
+    background: #55acee;
+}
+
+.rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus {
+    color: #55acee;
+    background: #fefefe;
+    border-color: #55acee;
+}
+
+.rounded-social-buttons .social-button.linkedin {
+    background: #007bb5;
+}
+
+.rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+    color: #007bb5;
+    background: #fefefe;
+    border-color: #007bb5;
+}
+
+.rounded-social-buttons .social-button.youtube {
+    background: #bb0000;
+}
+
+.rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
+    color: #bb0000;
+    background: #fefefe;
+    border-color: #bb0000;
+}
+
+.rounded-social-buttons .social-button.instagram {
+    background: #125688;
+}
+
+.rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
+    color: #125688;
+    background: #fefefe;
+    border-color: #125688;
+}
+
+/* ================ Mostly all common portable devices landscape =================*/
+/*Interesting fact when doing portrait media queries, you start from largest screen to smallest*/
+/*Ipad "Pro" Portrait is not really required */
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen
+and (min-device-width: 1280px)
+and (max-device-width: 1600px)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/*Query for regular Ipad portrait */
+@media only screen and (min-width: 768px) and (max-height: 1024px)
+and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+
+}
+
+@media only screen and (max-width: 414px) and (orientation: portrait) {
+
+}
+
+@media only screen and (max-width: 411px) and (orientation: portrait) {
+
+}
+
+/* Portrait iphonex*/
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {
+
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) {
+
+}
+
+@media only screen and (max-width: 360px) and (orientation: portrait) {
+
+}
+
+/*NEXT*/
+/* Extra small devices (iphone 5 and SE, iphone 6,7,8  and down) at portrait */
+
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 411px)
+and (max-device-width: 823px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 411px)
+and (max-device-width: 731px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 360px)
+and (max-device-width: 640px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+
+}

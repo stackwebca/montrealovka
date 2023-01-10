@@ -1,0 +1,86 @@
+.main_body {
+    display: grid;
+    position: relative;
+    justify-content: space-between;
+    top: 1.5em;
+    height: auto;
+    grid-template-areas: "main_left main_profileimg main_profilebio main_right";
+    grid-template-columns: .25fr .50fr .50fr .25fr;
+    grid-gap: 1.5em;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+}
+
+.main_left {
+    grid-area: main_left;
+    display: block;
+    position: relative;
+    margin: 0;
+    top: .50em;
+    left: .75em;
+    overflow-scrolling: auto;
+}
+.main_right {
+    grid-area: main_right;
+    position: relative;
+    margin: 0;
+    top: .50em;
+    right: .75em;
+    overflow-scrolling: auto;
+}
+.main_profileContainer {
+    grid-area: main_profileimg;
+    float: top;
+    position: relative;
+    margin: 0;
+    top: .50em;
+    width: 700px;
+    height: 1910px;
+}
+
+.main_profileimg {
+    margin: 0;
+    top: 13.5em;
+    position: fixed;
+    width: 700px;
+    height: 1910px;
+}
+
+.main_profilebio {
+    grid-area: main_profilebio;
+    position: relative;
+    margin: 0;
+    top: .50em;
+    width: 700px;
+    height: auto;
+}
+
+.main_biocontainer {
+    margin: 0;
+    left: 50.7%;
+    top: 13.5em;
+    position: fixed;
+    width: 700px;
+    height: 1910px;
+    background: #EAEFE9;
+}
+
+.contact_form {
+    margin: 0;
+    top: 15.5em;
+    position: fixed;
+    width: 700px;
+}
+
+textarea {
+    min-width: 25em;
+    max-height: 5em;
+}
+
+.sidepics {
+     width: 100%;
+ }
+
+.big_photo {
+    width: 100%;
+}
